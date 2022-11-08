@@ -1,33 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import { configureStore } from '@reduxjs/toolkit';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import store from './redux/configureStore';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { asyncGet } from './redux/books/apiThunks';
-import bookReducer from './redux/books/apiBooks';
 
-const preloadedState = {
-  books: [],
-};
-
-const store = configureStore({
-  reducer: {
-    books: bookReducer,
-    preloadedState,
-  },
-});
-
-store.dispatch(asyncGet());
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <Provider store={store}>
+ReactDOM.render(
+  <Provider store={store}>
+    <BrowserRouter>
       <App />
-    </Provider>
-  </React.StrictMode>,
+    </BrowserRouter>
+  </Provider>,
+  document.getElementById('root'),
 );
-
-reportWebVitals();

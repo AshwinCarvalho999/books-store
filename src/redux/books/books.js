@@ -1,23 +1,67 @@
-import { createSlice } from '@reduxjs/toolkit';
+import {
+  addBookToApi,
+  removeBookFromApi,
+  getBooksFromApi,
+} from '../../API/bookStoreApi';
 
-export const bookSlice = createSlice({
-  name: 'books',
-  initialState: {
-    value: [
-      { id: 1, author: 'By authot one', title: 'Book one' },
-      { id: 2, author: 'By authot two', title: 'Book two' },
-    ],
-  },
-  reducers: {
-    addBook: (state, action) => {
-      state.value.push(action.payload);
-    },
+const ADD_BOOK = 'bookStore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+const GET_BOOKS = 'bookStore/books/GET_BOOKS';
 
-    removeBook: (state, action) => {
-      state.value = state.value.filter((book) => book.id !== action.payload.id);
-    },
-  },
+const initialState = [];
+
+export const addBook = (payload) => ({
+  type: ADD_BOOK,
+  payload,
 });
 
-export const { addBook, removeBook } = bookSlice.actions;
-export default bookSlice.reducer;
+export const removeBook = (id) => ({
+  type: REMOVE_BOOK,
+  id,
+});
+
+export const getBooks = (payload) => ({
+  type: GET_BOOKS,
+  payload,
+});
+
+export const getAllBooks = () => async (dispatch) => {
+  const bookList = await getBooksFromApi();
+  const books = [];
+  Object.keys(bookList).forEach((id) => {
+    books.push({
+      item_id: id,
+      title: bookList[id][0].title,
+      category: bookList[id][0].category,
+    });
+  });
+  dispatch(getBooks(books));
+};
+
+export const addNewBook = (newBook) => async (dispatch) => {
+  await addBookToApi(newBook);
+  dispatch(addBook(newBook));
+};
+
+export const deleteBook = (bookID) => async (dispatch) => {
+  await removeBookFromApi(bookID);
+  dispatch(removeBook(bookID));
+};
+
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ADD_BOOK:
+      return [...state, action.payload];
+
+    case REMOVE_BOOK:
+      return state.filter((book) => book.item_id !== action.id);
+
+    case GET_BOOKS:
+      return action.payload;
+
+    default:
+      return state;
+  }
+};
+
+export default reducer;
