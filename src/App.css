@@ -42,7 +42,7 @@ body {
   font-size: 0.875rem;
   font-weight: 300;
   color: #4386bf;
-  font-family: "Roboto Slab", serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .actiontype {
@@ -59,7 +59,7 @@ body {
   letter-spacing: -0.2px;
   font-weight: 700;
   color: #121212;
-  font-family: "Roboto Slab", serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .progressStat .h2 {
@@ -76,7 +76,7 @@ body {
 }
 
 .chapter .h2 {
-  font-family: "Roboto Slab", serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 0.813rem;
   color: #121212;
@@ -86,7 +86,7 @@ body {
   margin-top: 0.438rem;
   font-size: 1rem;
   letter-spacing: -0.4px;
-  font-family: "Roboto Slab", serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   color: #121212;
 }
@@ -148,21 +148,21 @@ form {
   margin: auto;
 }
 
-form > input {
+form>input {
   width: 39%;
   height: 30px;
   margin: 10px;
 }
 
-form > h1 {
+form>h1 {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.navList > h1 {
+.navList>h1 {
   color: #0290ff;
 }
 
-form > button {
+form>button {
   width: 14%;
   height: 35px;
   background-color: #307bbe;
