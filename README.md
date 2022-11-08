@@ -1,63 +1,40 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Book Store
 
-> This is an Educational project aimed at learning professional use of React/React-Redux. It features books management; Adding, Editing, Completing and Removing books from the system using Redux actions and reducers. This app is MIT Licensed
+In this project, I built a basic website that allows users to add/remove books from a book list using React and Redux.
+
+<img src="https://user-images.githubusercontent.com/45231276/155704982-ebbf9e33-90a2-42de-8825-4551659b1816.PNG" width="30%" /><img src="https://user-images.githubusercontent.com/45231276/155704966-78e68b37-ee41-413e-ad3a-bb2de8adc4c4.PNG" width="70%" />
 
 ## Built With
 
-- JavaScript
-- ReactJs,
-- Git, GitHub, Git workflow
+- React.js
+- Redux
+- HTML - HTML5
+- CSS - CSS3
 
-## Live Demo
+## Additional Used
 
-[Link]()
+- Api
+- @redux/toolkit
+- Linters
+- Gitflow
+- npm
+- Jest (testing)
+
+## Live Demo 🌐
+
+### [Demo Link]()
 
 ## Getting Started
 
-### To have a copy of this project running on your local machine, follow these commands:
-
-- Clone this repo to your local machine
-  - `https://github.com/AshwinCarvalho999/Books-store.git`
-  - Open the folder "Books-store and run `npm install` to install all necesary scripts,
-  - Run from your termminal, `npm start` to open the project in your browser.
-
-**This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).**
-
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+`git clone git@github.com:Bondok6/book-store.git`
 
-- [NodeJS](https://nodejs.org/en/docs/)
+Then `cd book-store`
 
-> As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications. In the following "hello world" example, many connections can be handled concurrently. Upon each connection, the callback is fired, but if there is no work to be done, Node.js will sleep.
+Then `npm install` to install packages
 
-- [Text Editor(VScode Recommended)](https://code.visualstudio.com/)
-
-> Visual Studio Code is a free coding editor that helps you start coding quickly. Use it to code in any programming language, without switching editors.
-
-### Setup
-
-**Run from your terminal:**
-
-- `npx create-react-app todo-list-react`
-
-**cd into Books-store folder, then run from your terminal:**
-
-- `npm start`
-
-### Usage
-
-\*\*When the above commands aresuccessfully run, your browser should open on `localhost:3000`, if not, open your browser and load `127.0.0.1:3000` to see your default template loaded
-
-### Run tests
-
-> coming soon :smile:
-
-### Deployment
-
-> coming soon :smile:
+Finally `npm start`
 
 ## Author
 
@@ -71,7 +48,7 @@ Twitter: [twitter](https://twitter.com)
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/AshwinCarvalho999/books-store/issues).
 
 ## Show your support
 
@@ -79,9 +56,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc.
+- Inspired by [Zeplin project](https://app.zeplin.io/project/5b35a9e13227086040f8eb75/screen/5b695e29bb8c844f118f9378)
 
 ## 📝 License
 
